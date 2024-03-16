@@ -9,15 +9,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d("kotlintest1", "ログへの出力テスト")
+        // クラス
+        val dog = Animal("ポチ", 3)      // 名前をポチ、年齢3歳で、Dogのインスタンスを作る
 
-        // 整数型の変数をnumという名前で作成して、10を代入する
-        var num = 10
-        Log.d("kotlintest1", Integer.toString(num))
+        dog.say()  // ポチが吠えます（ログ出力）
+        Log.d("kotlintest", "犬の名前は" + dog.name + "です。")
+        Log.d("kotlintest", "犬の年齢は" + dog.age + "歳です。")
 
-        // numに50を代入する
-        // 変数や定数に .toString() と記述する方法もある
-        num = 50
-        Log.d("kotlintest1", num.toString())
+        val dog2 = Animal("ハチ", 10)    // 名前をハチ、年齢10歳で、Dogインスタンスを作る
+        dog2.say()  // ハチが吠えます（ログ出力）
+        Log.d("kotlintest", "犬の名前は" + dog2.name + "です。")
+        Log.d("kotlintest", "犬の年齢は" + dog2.age + "歳です。")
     }
 }
